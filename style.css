@@ -1,0 +1,75 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover;
+    padding: 20px;
+    margin: 8px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+.text_head {
+    color: white;
+    margin-bottom: 50px;
+    text-shadow: 4px 2px 8px;
+}
+
+.main {
+    margin: 20px;
+}
+
+.main > div {
+    margin-bottom: 30px;
+}
+
+.btn {
+    cursor: pointer;
+    color: white;
+    border-color: rgb(124, 124, 124);
+    background: linear-gradient(rgb(230, 230, 230) 0%, rgba(0, 0, 0, 0.25) 49%, rgba(38, 38, 38, 0.6) 51%, rgba(0, 0, 0, 0.25) 100%);
+    border-radius: 9px;
+}
+
+.text {
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+div.date {
+    width: 590px;
+    height: 200px;
+    border-bottom: 4px solid goldenrod;
+}
+
+div.date > p {
+    text-align: center;
+    vertical-align: bottom;
+    display: table-cell;
+}
+
+.second_table {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), goldenrod);
+    box-shadow: rgb(124, 124, 124) 10px 5px 10px;
+}
+
+.second_table td:last-child,td:nth-last-child(2)  {
+    background-color: red;
+    text-align: center;
+}
+
+.second_table td {
+    text-align: center;
+}
+.current_day {
+    border-radius: 45%;
+    border:2px solid red;
+    outline: none;
+}
