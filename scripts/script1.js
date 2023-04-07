@@ -1,4 +1,4 @@
-const button_first = document.getElementById("btn_1");
+const button_1 = document.getElementById("btn_1");
 let div = document.getElementsByClassName("date")[0]
 
 function showDateTime() {
@@ -21,7 +21,7 @@ function showDateTime() {
     setInterval(showDateTime, 1000);
 }
 
-button_first.addEventListener("click", (event) => {
+button_1.addEventListener("click", (event) => {
     showDateTime()
 
     if (div.style.display === "none") {

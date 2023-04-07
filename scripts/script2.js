@@ -1,4 +1,4 @@
-const btn = document.getElementById("btn_2")
+const button_2 = document.getElementById("btn_2")
 let tbl = document.getElementById("calendar")
 
 function Calendar(id, year, month) {
@@ -45,7 +45,7 @@ function Calendar(id, year, month) {
     }
 }
 
-btn.addEventListener("click", (event) => {
+button_2.addEventListener("click", (event) => {
     Calendar("calendar", new Date().getFullYear(), new Date().getMonth());
 
     if (tbl.style.display === "none") {

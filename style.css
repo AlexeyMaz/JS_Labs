@@ -1,5 +1,5 @@
 body {
-    background-image: url(bg.jpg);
+    background-image: url(images/bg.jpg);
     background-size: cover;
     padding: 20px;
     margin: 8px;
@@ -96,4 +96,18 @@ div.date > p {
 
 #calendar_right {
     background-color: unset !important;
+}
+
+.task4 {
+    margin-top: 20px;
+    display: flex;
+    width: 167px;
+    flex-wrap: wrap;
+}
+
+.task4 > div {
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    background-size: cover;
 }
