@@ -11,14 +11,21 @@
     <div class ="first">
         <button id="btn_1" class="text btn">Задание 1</button>
         <div style="color: white">
-            <div class="date hidden">
+            <div class="date" style="display: none">
                 <p></p>
             </div>
         </div>
     </div>
+
     <div class ="second" style="color: white">
         <button id="btn_2" class="text btn">Задание 2</button>
-        <div class="calendar hidden" style="margin-top:20px"></div>
+<!--        <div class="calendar hidden" style="margin-top:20px"></div>-->
+        <table id="calendar" style="display: none">
+            <thead>
+            <tr><td>‹<td colspan="5" style="background-color: unset !important;"><td style="background-color: unset !important;">›
+            <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+            <tbody>
+        </table>
     </div>
 
 </div>

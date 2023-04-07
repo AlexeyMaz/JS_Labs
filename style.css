@@ -5,7 +5,7 @@ body {
     margin: 8px;
 }
 
-h1{
+h1 {
     font-size: 40px;
 }
 
@@ -17,6 +17,7 @@ h3 {
     color: white;
     margin-bottom: 50px;
     text-shadow: 4px 2px 8px;
+    font-family: 'Playfair Display', serif;
 }
 
 .main {
@@ -44,9 +45,10 @@ h3 {
 }
 
 div.date {
-    width: 590px;
-    height: 200px;
+    width: 300px;
+    height: 40px;
     border-bottom: 4px solid goldenrod;
+    font-size: 20px;
 }
 
 div.date > p {
@@ -60,16 +62,38 @@ div.date > p {
     box-shadow: rgb(124, 124, 124) 10px 5px 10px;
 }
 
-.second_table td:last-child,td:nth-last-child(2)  {
-    background-color: red;
+#calendar {
+    margin-top: 20px;
+    line-height: 40px;
+    font-size: 20px;
     text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), orange);
+    box-shadow: rgb(124, 124, 124) 10px 5px 10px;
+    width: 20%;
 }
 
-.second_table td {
-    text-align: center;
+#calendar thead tr:nth-child(1) td:nth-child(1):hover, #calendar thead tr:nth-child(1) td:nth-child(3):hover {
+    cursor: pointer;
 }
-.current_day {
-    border-radius: 45%;
-    border:2px solid red;
+
+#calendar thead tr:last-child, #calendar tbody td, #calendar tbody td:nth-child(n+6), #calendar .holiday {
+    color: white;
+    border: none;
+    width: 50px;
+}
+
+#calendar tbody td:nth-child(n+6), #calendar .holiday {
+    background-color: red;
+    border: none;
+}
+
+#calendar tbody td.today {
+    border: 2px solid red;
+    border-radius: 20px;
     outline: none;
+}
+
+#calendar_right {
+    background-color: unset !important;
 }
