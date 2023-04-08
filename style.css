@@ -98,16 +98,25 @@ div.date > p {
     background-color: unset !important;
 }
 
-.task4 {
+.task4_5 {
     margin-top: 20px;
     display: flex;
     width: 167px;
     flex-wrap: wrap;
 }
 
-.task4 > div {
+.task4_5 > div {
     width: 80px;
     height: 80px;
     border: 2px solid white;
     background-size: cover;
+}
+
+#square {
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), orange);
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    margin-top: 20px;
 }
