@@ -136,36 +136,55 @@ h3 {
     transition: all 0.5s ease-in-out;
 }
 
+.task7 {
+    line-height: 40px;
+    font-size: 20px;
+    color: white
+}
 
 .menu ul {
-    margin: 0;
-    list-style: none;
-    padding-left: 20px;
+    padding-left: 40px;
+    cursor: pointer;
+    width: 30px;
 }
-.menu.hidden ul {
+
+.menu .hidden ul {
     display: none;
 }
+
 .menu .title {
     padding-left: 20px;
-    font-size: 18px;
     cursor: pointer;
     position: relative;
 }
 
-.menu .title::before {
-    content: " ▼ ";
-    position: absolute;
-    color: goldenrod;
-    top: -2px;
-    left: 0;
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
-.menu.hidden .title::before {
-    content: "▶ ";
-    top: 1px;
+@keyframes fadeout {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
+.fading {
+    animation: fade 1s ease backwards;
+}
 
+.fading_out {
+    animation: fadeout 2s ease forwards;
+}
 
 .task8 {
     width: 500px;
