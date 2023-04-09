@@ -12,25 +12,21 @@
         itemsList.classList.toggle("hidden");
     };
 
-    document.addEventListener("DOMContentLoaded", function () {
+    itemsList.addEventListener("click", (event) => {
+        let target = event.target;
+        if (target.tagName === "LI") {
+            target.classList.add("fading");
+            setTimeout(() => {
+                target.remove();
+            }, 800);
+        }
 
-
-        itemsList.addEventListener("click", function (event) {
-            let target = event.target;
-            if (target.tagName === "LI") {
-                target.classList.add("fading");
-                setTimeout(() => {
-                    target.remove();
-                }, 800);
-            }
-
-            if (itemsList.childElementCount === 1) {
-                setTimeout(() => {
-                    end_text.style.visibility = "visible";
-                    end_text.classList.add("fading_out");
-                }, 300);
-            }
-        });
+        if (itemsList.childElementCount === 1) {
+            setTimeout(() => {
+                end_text.style.visibility = "visible";
+                end_text.classList.add("fading_out");
+            }, 300);
+        }
     });
 
 
