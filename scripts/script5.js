@@ -31,11 +31,17 @@
         if (event.target === btn_rmv && isRmvBtnClicked) {
             alert('Выберите блок для удаления');
         } else if (event.target === btn_rmv) {
+            for (i = 0; i < circles.length; i++) {
+                circles[i].style.cursor = 'pointer';
+            }
             isRmvBtnClicked = true;
         } else {
             if (isRmvBtnClicked) {
                 event.target.remove();
                 isRmvBtnClicked = false;
+                for (i = 0; i < circles.length; i++) {
+                    circles[i].style.cursor = 'unset';
+                }
             }
         }
     }

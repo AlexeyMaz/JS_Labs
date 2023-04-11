@@ -1,6 +1,6 @@
 body {
     background-image: url(images/bg.jpg);
-    background-size: cover;
+    /*background-size: cover;*/
     padding: 20px;
     margin: 8px;
 }
@@ -134,6 +134,7 @@ h3 {
     height: 30px;
     width: 270px;
     border-radius: 20px;
+    cursor: pointer;
     color: white;
     border-color: rgb(124, 124, 124);
 }
@@ -231,4 +232,36 @@ h3 {
     font-size: 30px;
     z-index: 10;
     position: absolute;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=phone],
+input[type=date]{
+    width: 540px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    border: 2px solid #222222;
+}
+
+button[type=submit] {
+    background-image: linear-gradient(white, goldenrod, black);
+    color: white;
+    margin: 8px 0;
+    cursor: pointer;
+    height: 30px;
+    width: 270px;
+}
+
+button {
+    user-select: none;
 }

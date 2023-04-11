@@ -129,7 +129,72 @@
     <div class="9th">
         <button id="btn_9" class="text btn">Задание 9</button>
 
+        <div class="task9" style="display: none">
+            <!-- onsubmit="return false;" -->
+            <form id="task9-form" style="color: white; margin-top: 20px; font-size: 20px !important;">
+                <label for="fio">ФИО (отчество, если имеется)</label><br><input type="text" id="fio" placeholder="">
+                <label id="FioErr" style="color:red; display:none">Некорректное ФИО</label><br><br>
+
+                <label for="email2">E-mail</label><br><input type="text" id="email2" placeholder="yourmail@example.com">
+                <label id="MailErr" style="color:red; display:none">Некорректный формат почты</label><br><br>
+
+                <label for="password2">Пароль</label><br><input type="password" id="password2">
+                <label id="PassErr" style="color:red; display:none; ">
+                    Некорректный формат пароля. Пароль должен состоять хотя бы из 8 символов и хотя бы одной цифры.</label><br><br>
+
+                <label for="password3">Подтвердите пароль</label><br><input type="password" id="password3">
+                <label id="ConfPassErr" style="color:red; display:none">Пароли не совпадают</label><br><br>
+
+                <label for="phone">Номер телефона</label><br><input type="text" id="phone">
+                <label id="PhoneErr" style="color:red; display:none ">Некорректный формат номера</label><br><br>
+
+                <label for="birthday">Дата рождения</label><br><input type="date" id="birthday" name="birthday">
+                <label id="birthErr" style="color:red; display:none">Некорректная дата</label><br>
+
+                <p class="check">Какие языки вы знаете?</p>
+                <label class="language"><input type="checkbox" name="languages" value="C#"> C#</label>
+                <label class="language"><input type="checkbox" name="languages" value="Dart"> R</label>
+                <label class="language"><input type="checkbox" name="languages" value="Python"> Python</label>
+                <label class="language"><input type="checkbox" name="languages" value="Ruby"> Ruby</label>
+                <label class="language"><input type="checkbox" name="languages" value="VBA"> VBA</label>
+                <label class="language"><input type="checkbox" name="languages" value="SQL"> SQL</label>
+
+                <p class="check_gen">Пол</p>
+                <label class="language"><input type="radio" name="gender" value="male"> М</label>
+                <label class="language"><input type="radio" name="gender" value="female"> Ж</label><br><br>
+
+                <!--                    <p  for="professions"></p>-->
+                <label for="professions" style="display: block;">Выберите вашу профессию</label>
+                <select style="margin-top: 10px; font-size: 17px" id="professions" name="professions" onchange="showOtherInput()">
+                <option value="developer">Big Data аналитик</option>
+                <option value="designer">DevOps</option>
+                <option value="manager">Full-stack разработчик</option>
+                <option value="writer">Люблю виджеты</option>
+                <option value="other">Другое</option>
+            </select><br>
+
+                <div id="other-input" style="display: none;">
+                    <label style="display: block; margin-bottom: 20px; margin-top: 20px;" for="other-profession">Напишите
+                        свою профессию:</label>
+                    <input style="display: block; margin-bottom: 20px;" type="text"
+                           id="other-profession" name="other-profession">
+                </div><br>
+
+<!--                <p style="display: block; font-size: 19px;">:</p>-->
+                <label for="AboutMe" style="margin-top: 10px;">Расскажите немного о себе</label><br>
+                <textarea id="AboutMe" style="resize: none; width: 540px;
+                height: 150px; font-size: 20px; border-radius: 10px; margin-top: 10px;"
+                          rows="4" cols="50"></textarea><br>
+
+                <button type="submit" class="text task5_buttons" style="background-image:linear-gradient(white, goldenrod, black)">
+                    Зарегистрироваться</button>
+                <button type="reset" id="clear-button" class="text task5_buttons" style="background-image:
+            linear-gradient(white, silver, black); color: black !important;">Очистить поля</button>
+            </form>
+
+        </div>
     </div>
+
 
 </div>
 
@@ -141,6 +206,7 @@
 <script type="text/javascript" src="scripts/script6.js"></script>
 <script type="text/javascript" src="scripts/script7.js"></script>
 <script type="text/javascript" src="scripts/script8.js"></script>
+<script type="text/javascript" src="scripts/script9.js"></script>
 
 </body>
 </html>
