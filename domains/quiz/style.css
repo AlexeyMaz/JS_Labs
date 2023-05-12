@@ -1,0 +1,27 @@
+.question {
+    font-size: 25px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.text {
+    font-size: 20px;
+    color: #000000;
+}
+
+.answer {
+    font-size: 23px;
+    padding: 5px;
+    border: 1px solid #000000;
+}
+
+.submit {
+    color: white;
+    margin: 8px 0;
+    cursor: pointer;
+    height: 30px;
+    width: 270px;
+    border-color: rgb(124, 124, 124);
+    background: linear-gradient(rgb(230, 230, 230) 0%, rgba(0, 0, 0, 0.25) 49%, rgba(38, 38, 38, 0.6) 51%, rgba(0, 0, 0, 0.25) 100%);
+    border-radius: 9px;
+}

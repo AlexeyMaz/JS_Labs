@@ -1,0 +1,26 @@
+.text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.txbox {
+    font-size: 12px;
+    padding: 7px;
+    border: 1px solid #050505;
+}
+
+.submit {
+    color: white;
+    margin: 8px 0;
+    cursor: pointer;
+    height: 30px;
+    width: 270px;
+    border-color: rgb(124, 124, 124);
+    background: linear-gradient(rgb(230, 230, 230) 0%, rgba(0, 0, 0, 0.25) 49%, rgba(38, 38, 38, 0.6) 51%, rgba(0, 0, 0, 0.25) 100%);
+    border-radius: 9px;
+}
+
+* {
+    margin: 20px 0;
+}

@@ -1,0 +1,111 @@
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="menu">
+    <div class="icon-close">
+        <img src="images/close-btn.png">
+    </div>
+
+    <ul>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Get started</a></li>
+        <li><a href="#">Demos &amp; Usage</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Themes</a></li>
+        <li><a href="#">Development</a></li>
+    </ul>
+</div>
+
+<div class="background">
+    <div class="icon-menu">
+        <img src="images/menu-ham-icon.png">
+        Menu
+    </div>
+
+
+    <div class="registration-form-container" style="color: whitesmoke">
+        <form id="registration-form">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required class="form-input">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required class="form-input">
+
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required class="form-input">
+
+            <label for="confirm-password">Подтвердите пароль:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required class="form-input">
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required class="form-input">
+                <option value="">Выберите пол</option>
+                <option value="male">Мужской</option>
+                <option value="female">Женский</option>
+            </select>
+
+            <label for="age">Возраст:</label>
+            <input type="number" id="age" name="age" required class="form-input">
+
+            <button type="submit" class="registration-form act">Register</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+                $('#registration-form').submit(function (event) {
+                    event.preventDefault();
+
+                    var name = $('#name').val().trim();
+                    var email = $('#email').val().trim();
+                    var password = $('#password').val().trim();
+                    var confirmPassword = $('#confirm-password').val().trim();
+                    var gender = $('#gender').val().trim();
+                    var age = $('#age').val().trim();
+
+                    if (name === '' || email === '' || password === '' || confirmPassword === '' || gender === '' || age === '') {
+                        alert('Заполните все поля');
+                        return;
+                    }
+
+                    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Некорректный email');
+                        return;
+                    }
+
+                    if (password !== confirmPassword) {
+                        alert('Пароли не совпадают');
+                        return;
+                    }
+
+                    var passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z\d]{8,}$/;
+                    if (!passwordRegex.test(password)) {
+                        alert('Пароль должен содержать хотя бы одну букву и цифру, длина от 8 символов');
+                        return;
+                    }
+
+                    if (isNaN(age)) {
+                        alert('Возраст введите');
+                        return;
+                    }
+
+                    if (age < 18 || age > 100) {
+                        alert('Вам должно быть от 18 до 100');
+                        return;
+                    }
+                })
+            }
+        )
+    </script>
+</div>
+
+<script src="menu.js"></script>
+</body>
+</html>
